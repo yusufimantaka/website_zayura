@@ -1,26 +1,119 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F9F9F7;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --muted: #F3F3F1;
+  --muted-foreground: #666666;
+  --border: #E5E5E0;
+  --input: #E5E5E0;
+  --primary: #FFBF00;
+  --primary-foreground: #1A1A1A;
+  --accent: #F3F3F1;
+  --ring: #FFBF00;
+  --radius: 1.25rem;
+}
+
+.dark {
+  --background: #0C0C0B;
+  --foreground: #F9F9F7;
+  --card: #141413;
+  --card-foreground: #F9F9F7;
+  --muted: #1C1C1B;
+  --muted-foreground: #A1A19A;
+  --border: #272726;
+  --input: #272726;
+  --primary: #FFBF00;
+  --primary-foreground: #0C0C0B;
+  --accent: #1C1C1B;
+  --ring: #FFBF00;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-ring: var(--ring);
+  
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  @apply antialiased;
+}
+
+/* Subtle noise overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.bg-pattern {
+  background-color: transparent;
+  background-image: url("https://www.transparenttextures.com/patterns/cream-pixels.png");
+  background-attachment: fixed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  @apply antialiased transition-colors duration-300;
+}
+
+/* Subtle noise overlay for premium feel */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  opacity: 0.03; /* Reduced opacity for a truly subtle feel */
+  pointer-events: none;
+  z-index: 100;
+}
+
+@theme {
+  --color-primary: #FFBF00;
+  --color-primary-dark: #E6AC00;
+}
+
+.bg-pattern {
+  background-color: transparent;
+  background-image: url("https://www.transparenttextures.com/patterns/cream-pixels.png");
+  background-attachment: fixed;
 }
