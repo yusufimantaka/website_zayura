@@ -81,13 +81,13 @@ export const PropertyCard = ({ image, name, location, price, tag, customPrice }:
         </div>
       </div>
 
-      <div className="px-2 pb-2 relative z-10">
-        <h3 className="font-black text-foreground text-xl tracking-tight group-hover:text-primary transition-colors mb-1">{name}</h3>
-        <p className="text-muted-foreground text-sm font-medium mb-5 leading-relaxed">{location}</p>
-        <div className="flex flex-col gap-4">
-          <div className="flex items-baseline gap-1.5 justify-center md:justify-start">
-            <span className="text-2xl font-black text-foreground tracking-tighter">Rp {price}</span>
-            <span className="text-gray-400 dark:text-zinc-500 text-xs font-bold uppercase tracking-widest">/ bulan</span>
+      <div className="px-1 md:px-2 pb-2 relative z-10">
+        <h3 className="font-black text-foreground text-lg md:text-xl tracking-tight group-hover:text-primary transition-colors mb-1">{name}</h3>
+        <p className="text-muted-foreground text-xs md:text-sm font-medium mb-4 md:mb-5 leading-relaxed">{location}</p>
+        <div className="flex flex-col gap-3 md:gap-4">
+          <div className="flex items-baseline gap-1.5 justify-start">
+            <span className="text-xl md:text-2xl font-black text-foreground tracking-tighter">Rp {price}</span>
+            <span className="text-gray-400 dark:text-zinc-500 text-[10px] md:text-xs font-bold uppercase tracking-widest">/ bulan</span>
           </div>
           {customPrice}
         </div>

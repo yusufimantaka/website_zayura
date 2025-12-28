@@ -4,12 +4,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, Menu, X } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 export const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -36,116 +37,166 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navLinks = [
+    { id: 'gallery', label: 'Galeri' },
+    { id: 'location', label: 'Lokasi' },
+    { id: 'sewa', label: 'Paket' },
+    { id: 'keunggulan', label: 'Fasilitas' }
+  ];
+
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
-        isScrolled 
-          ? "pt-4 px-4" 
-          : "pt-0 px-0"
-      }`}
-    >
-      <motion.div 
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ type: "spring" as const, stiffness: 260, damping: 20 }}
-        className={`mx-auto transition-all duration-500 ease-in-out flex items-center justify-between ${
+    <>
+      <nav 
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
           isScrolled 
-            ? "max-w-7xl bg-white/80 dark:bg-black/60 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-white/10 rounded-full px-8 py-3" 
-            : "max-w-full bg-transparent border-transparent rounded-none px-12 py-8"
+            ? "pt-4 px-4" 
+            : "pt-0 px-0"
         }`}
       >
-        <Link href="#home" className="flex items-center gap-2 group shrink-0">
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Image 
-            src="/images/logo.png" 
-            alt="Zayura Exclusive" 
-            width={120} 
-            height={40} 
-            className={`h-8 w-auto object-contain transition-all duration-500 ${
-              !isScrolled || theme === 'dark' ? 'brightness-0 invert' : ''
-            }`}
-          />
-          </motion.div>
-        </Link>
-        
-        <div className="flex items-center gap-10">
-          <div className="hidden lg:flex items-center gap-8 text-sm font-bold transition-colors duration-500">
-            {['gallery', 'location', 'sewa', 'keunggulan'].map((section) => {
-              const labels: Record<string, string> = {
-                gallery: 'Galeri',
-                location: 'Lokasi',
-                sewa: 'Paket',
-                keunggulan: 'Fasilitas'
-              };
-              const isActive = activeSection === section;
-              
-              return (
-                <Link 
-                  key={section}
-                  href={`#${section}`} 
-                  className="relative px-1 py-2 group"
-                >
-                  <span className={`transition-colors duration-300 ${
-                    isActive 
-                      ? (isScrolled ? 'text-primary' : 'text-white') 
-                      : (isScrolled ? 'text-gray-500 hover:text-gray-900' : 'text-white/80 hover:text-white')
-                  }`}>
-                    {labels[section]}
-                  </span>
-                  {isActive && (
-                    <motion.div 
-                      layoutId="navUnderline"
-                      className={`absolute bottom-0 left-0 right-0 h-0.5 rounded-full ${
-                        isScrolled ? 'bg-primary' : 'bg-white'
-                      }`}
-                      transition={{ type: "spring" as const, stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className={`p-2 rounded-full transition-all duration-300 ${
-                isScrolled 
-                  ? 'hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:bg-white/10' 
-                  : 'hover:bg-white/10 text-white'
+        <motion.div 
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          transition={{ type: "spring" as const, stiffness: 260, damping: 20 }}
+          className={`mx-auto transition-all duration-500 ease-in-out flex items-center justify-between ${
+            isScrolled 
+              ? "max-w-7xl bg-white/80 dark:bg-black/60 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-white/10 rounded-full px-4 md:px-8 py-3" 
+              : "max-w-full bg-transparent border-transparent rounded-none px-6 md:px-12 py-6 md:py-8"
+          }`}
+        >
+          <Link href="#home" className="flex items-center gap-2 group shrink-0">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Image 
+              src="/images/logo.png" 
+              alt="Zayura Exclusive" 
+              width={100} 
+              height={32} 
+              className={`h-6 md:h-8 w-auto object-contain transition-all duration-500 ${
+                !isScrolled || theme === 'dark' ? 'brightness-0 invert' : ''
               }`}
-              aria-label="Toggle theme"
-            >
-              <AnimatePresence mode="wait" initial={false}>
-                {mounted && (
-                  <motion.div
-                    key={theme}
-                    initial={{ y: -20, opacity: 0, rotate: -90 }}
-                    animate={{ y: 0, opacity: 1, rotate: 0 }}
-                    exit={{ y: 20, opacity: 0, rotate: 90 }}
-                    transition={{ duration: 0.2 }}
+            />
+            </motion.div>
+          </Link>
+          
+          <div className="flex items-center gap-2 md:gap-10">
+            <div className="hidden lg:flex items-center gap-8 text-sm font-bold transition-colors duration-500">
+              {navLinks.map((section) => {
+                const isActive = activeSection === section.id;
+                
+                return (
+                  <Link 
+                    key={section.id}
+                    href={`#${section.id}`} 
+                    className="relative px-1 py-2 group"
                   >
-                    {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </button>
+                    <span className={`transition-colors duration-300 ${
+                      isActive 
+                        ? (isScrolled ? 'text-primary' : 'text-white') 
+                        : (isScrolled ? 'text-gray-500 hover:text-gray-900' : 'text-white/80 hover:text-white')
+                    }`}>
+                      {section.label}
+                    </span>
+                    {isActive && (
+                      <motion.div 
+                        layoutId="navUnderline"
+                        className={`absolute bottom-0 left-0 right-0 h-0.5 rounded-full ${
+                          isScrolled ? 'bg-primary' : 'bg-white'
+                        }`}
+                        transition={{ type: "spring" as const, stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                  </Link>
+                );
+              })}
+            </div>
 
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="#contact"
-              className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-500 shadow-sm hover:shadow-md ${
-                isScrolled 
-                  ? "bg-primary text-gray-900 hover:brightness-110" 
-                  : "bg-white text-gray-900 hover:bg-gray-100"
-              }`}
-            >
-              Hubungi Kami
-            </motion.a>
+            <div className="flex items-center gap-2 md:gap-4">
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className={`p-2 rounded-full transition-all duration-300 ${
+                  isScrolled 
+                    ? 'hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:bg-white/10' 
+                    : 'hover:bg-white/10 text-white'
+                }`}
+                aria-label="Toggle theme"
+              >
+                <AnimatePresence mode="wait" initial={false}>
+                  {mounted && (
+                    <motion.div
+                      key={theme}
+                      initial={{ y: -10, opacity: 0, rotate: -90 }}
+                      animate={{ y: 0, opacity: 1, rotate: 0 }}
+                      exit={{ y: 10, opacity: 0, rotate: 90 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </button>
+
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="#contact"
+                className={`hidden sm:flex px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-500 shadow-sm hover:shadow-md ${
+                  isScrolled 
+                    ? "bg-primary text-gray-900 hover:brightness-110" 
+                    : "bg-white text-gray-900 hover:bg-gray-100"
+                }`}
+              >
+                Hubungi Kami
+              </motion.a>
+
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className={`lg:hidden p-2 rounded-full transition-all duration-300 ${
+                  isScrolled 
+                    ? 'hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:bg-white/10' 
+                    : 'hover:bg-white/10 text-white'
+                }`}
+              >
+                {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              </button>
+            </div>
           </div>
-        </div>
-      </motion.div>
-    </nav>
+        </motion.div>
+      </nav>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed inset-0 z-[40] lg:hidden bg-background/95 backdrop-blur-xl pt-24 px-6 pb-8"
+          >
+            <div className="flex flex-col gap-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.id}
+                  href={`#${link.id}`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-2xl font-black tracking-tighter ${
+                    activeSection === link.id ? 'text-primary' : 'text-foreground/60'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="h-[1px] bg-border my-4" />
+              <motion.a
+                whileTap={{ scale: 0.95 }}
+                href="#contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="bg-primary text-gray-900 px-8 py-4 rounded-2xl text-lg font-black text-center shadow-lg shadow-primary/20"
+              >
+                Hubungi Kami
+              </motion.a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };

@@ -70,9 +70,9 @@ export const ListingGrid = () => {
               price={room.price}
               tag={room.tag}
               customPrice={
-                <div className="mt-2 p-3 bg-amber-50 dark:bg-amber-500/10 rounded-2xl border border-amber-100 dark:border-amber-500/20 group-hover:bg-white dark:group-hover:bg-white/10 transition-colors duration-500 text-center md:text-left">
-                  <p className="text-[10px] font-black text-amber-600 dark:text-amber-500 uppercase tracking-widest mb-1">Bayar per 3 bulan</p>
-                  <p className="text-amber-700 dark:text-amber-400 font-black text-lg tracking-tight">Rp {room.discount} <span className="text-xs font-medium text-amber-600 dark:text-amber-500/80">/ bulan</span></p>
+                <div className="mt-1 p-2.5 md:p-3 bg-amber-50 dark:bg-amber-500/10 rounded-xl md:rounded-2xl border border-amber-100 dark:border-amber-500/20 group-hover:bg-white dark:group-hover:bg-white/10 transition-colors duration-500 text-left">
+                  <p className="text-[8px] md:text-[10px] font-black text-amber-600 dark:text-amber-500 uppercase tracking-widest mb-0.5 md:mb-1">Bayar per 3 bulan</p>
+                  <p className="text-amber-700 dark:text-amber-400 font-black text-base md:text-lg tracking-tight">Rp {room.discount} <span className="text-[10px] md:text-xs font-medium text-amber-600 dark:text-amber-500/80">/ bulan</span></p>
                 </div>
               }
             />

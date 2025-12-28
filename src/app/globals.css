@@ -52,48 +52,27 @@
   --radius-sm: calc(var(--radius) - 4px);
 }
 
+@theme {
+  --color-primary: #FFBF00;
+  --color-primary-dark: #E6AC00;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground transition-colors duration-300;
+  
+  html, body {
+    @apply overflow-x-hidden;
+    width: 100%;
+    position: relative;
+    scroll-behavior: smooth;
   }
-}
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
-  @apply antialiased;
-}
-
-/* Subtle noise overlay */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
-  opacity: 0.03;
-  pointer-events: none;
-  z-index: 100;
-}
-
-.bg-pattern {
-  background-color: transparent;
-  background-image: url("https://www.transparenttextures.com/patterns/cream-pixels.png");
-  background-attachment: fixed;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
-  @apply antialiased transition-colors duration-300;
+  body {
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    @apply bg-background text-foreground antialiased transition-colors duration-300;
+  }
 }
 
 /* Subtle noise overlay for premium feel */
@@ -102,14 +81,9 @@ body::before {
   position: fixed;
   inset: 0;
   background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
-  opacity: 0.03; /* Reduced opacity for a truly subtle feel */
+  opacity: 0.03;
   pointer-events: none;
   z-index: 100;
-}
-
-@theme {
-  --color-primary: #FFBF00;
-  --color-primary-dark: #E6AC00;
 }
 
 .bg-pattern {
