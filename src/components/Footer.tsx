@@ -34,9 +34,9 @@ export const Footer = () => {
             <h4 className="font-serif text-lg text-foreground mb-6 tracking-tight">Navigasi</h4>
             <ul className="space-y-4 text-sm text-muted-foreground font-medium">
               <li><Link href="/" className="hover:text-primary transition-colors">Beranda</Link></li>
-              <li><Link href="#sewa" className="hover:text-primary transition-colors">Paket Kamar</Link></li>
-              <li><Link href="#gallery" className="hover:text-primary transition-colors">Galeri</Link></li>
-              <li><Link href="#contact" className="hover:text-primary transition-colors">Kontak</Link></li>
+              <li><Link href="/paket" className="hover:text-primary transition-colors">Paket Kamar</Link></li>
+              <li><Link href="/kamar" className="hover:text-primary transition-colors">Galeri</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors">Kontak</Link></li>
             </ul>
           </div>
 

@@ -19,27 +19,27 @@ export const PropertyGallery = () => {
           <TabsList className="flex w-fit mx-auto rounded-full bg-muted dark:bg-white/5 p-1 mb-12 md:mb-20 border border-border overflow-hidden">
             <TabsTrigger 
               value="small" 
-              className="rounded-full px-8 md:px-12 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-muted-foreground font-bold transition-all text-[11px] uppercase tracking-[0.2em]"
+              className="rounded-full px-4 md:px-12 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-muted-foreground font-bold transition-all text-[10px] md:text-[11px] uppercase tracking-[0.2em]"
             >
-              Tipe Small
+              Small
             </TabsTrigger>
             <TabsTrigger 
               value="medium" 
-              className="rounded-full px-8 md:px-12 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-muted-foreground font-bold transition-all text-[11px] uppercase tracking-[0.2em]"
+              className="rounded-full px-4 md:px-12 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-muted-foreground font-bold transition-all text-[10px] md:text-[11px] uppercase tracking-[0.2em]"
             >
-              Tipe Medium
+              Medium
             </TabsTrigger>
             <TabsTrigger 
               value="large" 
-              className="rounded-full px-8 md:px-12 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-muted-foreground font-bold transition-all text-[11px] uppercase tracking-[0.2em]"
+              className="rounded-full px-4 md:px-12 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-muted-foreground font-bold transition-all text-[10px] md:text-[11px] uppercase tracking-[0.2em]"
             >
-              Tipe Large
+              Large
             </TabsTrigger>
           </TabsList>
           
           {['small', 'medium', 'large'].map((roomType) => (
             <TabsContent key={roomType} value={roomType} className="focus-visible:outline-none">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 h-[500px] md:h-[800px]">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 h-[600px] md:h-[800px]">
                 <div className="col-span-2 row-span-2 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-2xl border border-border">
                   <Image 
                     src={`https://images.unsplash.com/photo-${roomType === 'small' ? '1522708323590-d24dbb6b0267' : roomType === 'medium' ? '1502672260266-1c1ef2d93688' : '1554995207-c18c203602cb'}?q=80&w=1200&auto=format&fit=crop`}

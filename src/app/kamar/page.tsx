@@ -62,9 +62,9 @@ export default function KamarPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-card rounded-[2.5rem] p-10 border border-border shadow-sm hover:shadow-xl transition-all group"
+                className="bg-card rounded-[2.5rem] p-8 md:p-10 border border-border shadow-sm hover:shadow-xl transition-all group"
               >
-                <h2 className="text-3xl font-serif mb-6 group-hover:text-primary transition-colors">{room.type}</h2>
+                <h2 className="text-2xl md:text-3xl font-serif mb-6 group-hover:text-primary transition-colors">{room.type}</h2>
                 <p className="text-muted-foreground mb-8 text-sm leading-relaxed">{room.description}</p>
                 
                 <div className="space-y-4 mb-10">

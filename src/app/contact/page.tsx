@@ -106,15 +106,15 @@ export default function ContactPage() {
             <motion.div 
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="bg-primary rounded-[4rem] p-12 md:p-20 flex flex-col items-center justify-center text-center text-primary-foreground shadow-2xl shadow-primary/20 relative overflow-hidden"
+              className="bg-primary rounded-[3rem] md:rounded-[4rem] p-8 md:p-20 flex flex-col items-center justify-center text-center text-primary-foreground shadow-2xl shadow-primary/20 relative overflow-hidden"
             >
               <div className="absolute inset-0 opacity-10 pointer-events-none" 
                    style={{ backgroundImage: `url("https://www.transparenttextures.com/patterns/natural-paper.png")` }} 
               />
               <div className="relative z-10">
-                <MessageCircle size={80} strokeWidth={1} className="mb-10 mx-auto opacity-50" />
-                <h3 className="text-4xl md:text-6xl font-serif mb-8 leading-tight">Fast Response via WhatsApp</h3>
-                <p className="text-lg md:text-xl mb-12 opacity-80 font-serif italic">
+                <MessageCircle size={60} md:size={80} strokeWidth={1} className="mb-8 md:mb-10 mx-auto opacity-50" />
+                <h3 className="text-3xl md:text-6xl font-serif mb-6 md:mb-8 leading-tight">Fast Response via WhatsApp</h3>
+                <p className="text-base md:text-xl mb-10 md:mb-12 opacity-80 font-serif italic">
                   {"Dapatkan respon tercepat untuk ketersediaan unit dan jadwal visit melalui WhatsApp resmi kami."}
                 </p>
                 <motion.a 
@@ -123,7 +123,7 @@ export default function ContactPage() {
                   href="https://wa.me/6281234567890"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-primary-foreground text-primary px-12 py-6 rounded-full text-base font-bold uppercase tracking-[0.2em] shadow-xl inline-block"
+                  className="bg-primary-foreground text-primary px-10 md:px-12 py-4 md:py-6 rounded-full text-sm md:text-base font-bold uppercase tracking-[0.2em] shadow-xl inline-block"
                 >
                   Hubungi Sekarang
                 </motion.a>

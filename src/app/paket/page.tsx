@@ -53,9 +53,9 @@ export default function PaketPage() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-card rounded-[3rem] p-12 border border-border shadow-sm"
+              className="bg-card rounded-[3rem] p-8 md:p-12 border border-border shadow-sm"
             >
-              <h3 className="text-3xl font-serif mb-10">Inklusi Layanan</h3>
+              <h3 className="text-2xl md:text-3xl font-serif mb-10">Inklusi Layanan</h3>
               <div className="space-y-6">
                 {inclusionData.map((data, i) => (
                   <div key={i} className="flex items-center justify-between py-2 border-b border-border last:border-0">
@@ -80,7 +80,7 @@ export default function PaketPage() {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="bg-muted/30 rounded-[3rem] p-12 border border-border"
+                className="bg-muted/30 rounded-[3rem] p-8 md:p-12 border border-border"
               >
                 <div className="flex items-center gap-4 mb-8">
                   <Wallet size={24} className="text-primary" />
@@ -98,7 +98,7 @@ export default function PaketPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="bg-card rounded-[3rem] p-12 border border-border shadow-sm"
+                className="bg-card rounded-[3rem] p-8 md:p-12 border border-border shadow-sm"
               >
                 <div className="flex items-center gap-4 mb-8">
                   <Calendar size={24} className="text-primary" />

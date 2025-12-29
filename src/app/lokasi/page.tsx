@@ -113,8 +113,8 @@ export default function LokasiPage() {
           </div>
 
           {/* Transportation / Access */}
-          <div className="bg-muted/30 rounded-[3rem] p-12 md:p-20 text-center">
-            <h3 className="text-3xl font-serif mb-8">Aksesibilitas & Lingkungan</h3>
+          <div className="bg-muted/30 rounded-[3rem] p-8 md:p-20 text-center">
+            <h3 className="text-2xl md:text-3xl font-serif mb-8">Aksesibilitas & Lingkungan</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
               <div className="flex gap-6">
                 <div className="shrink-0 w-12 h-12 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center shadow-sm">

@@ -123,9 +123,9 @@ export default function GedungPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-muted/30 rounded-[2.5rem] p-10 border border-border"
+                className="bg-muted/30 rounded-[2.5rem] p-8 md:p-10 border border-border"
               >
-                <h2 className="text-2xl font-serif mb-6">{section.title}</h2>
+                <h2 className="text-xl md:text-2xl font-serif mb-6">{section.title}</h2>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-8">{section.description}</p>
                 <div className="space-y-6">
                   {section.items.map((item, j) => (
@@ -143,9 +143,9 @@ export default function GedungPage() {
         </section>
 
         {/* Building Specs Table */}
-        <section className="max-w-4xl mx-auto px-4 py-24 bg-card rounded-[3rem] border border-border shadow-sm text-center">
-          <h2 className="text-3xl font-serif mb-12">Spesifikasi Gedung</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 text-left px-8">
+        <section className="max-w-4xl mx-auto px-4 py-16 md:py-24 bg-card rounded-[3rem] border border-border shadow-sm text-center">
+          <h2 className="text-2xl md:text-3xl font-serif mb-12">Spesifikasi Gedung</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 text-left px-4 md:px-8">
             <div className="flex justify-between border-b border-border pb-4">
               <span className="text-muted-foreground font-medium">Tahun Bangun</span>
               <span className="font-bold">2024 (Brand New)</span>

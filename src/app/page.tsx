@@ -219,10 +219,10 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={fadeInUp} className="max-w-4xl mb-12 md:mb-16">
-              <h2 className="text-white text-2xl md:text-4xl font-serif italic mb-6 leading-tight">
+              <h2 className="text-white text-xl md:text-4xl font-serif italic mb-6 leading-tight px-4">
                 {"\"Kost Putri Eksklusif & Premium Terdekat dari UB & UIN Malang.\""}
               </h2>
-              <p className="text-white/70 text-sm md:text-lg font-medium tracking-wide">
+              <p className="text-white/70 text-xs md:text-lg font-medium tracking-wide px-6">
                 Fasilitas lengkap: AC, Water Heater, WiFi 400Mbps. Aman dengan Security & CCTV 24 Jam.
               </p>
             </motion.div>
@@ -415,8 +415,8 @@ export default function Home() {
 
       {/* 5. Standar Kami (Facilities Icons) - RESTORED */}
       <section id="keunggulan" className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-24 relative z-10">
-        <div className="bg-white dark:bg-card rounded-[3rem] p-8 md:p-24 border border-border shadow-[0_32px_64px_-12px_rgba(0,0,0,0.08)]">
-          <div className="flex flex-col lg:flex-row gap-12 items-start justify-between mb-20 md:mb-24 px-2 text-center lg:text-left">
+        <div className="bg-white dark:bg-card rounded-[3rem] p-6 md:p-24 border border-border shadow-[0_32px_64px_-12px_rgba(0,0,0,0.08)]">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-between mb-12 md:mb-24 px-2 text-center lg:text-left">
             <div className="max-w-2xl mx-auto lg:mx-0">
               <motion.h2 
                 initial={{ opacity: 0, x: -20 }}
@@ -431,7 +431,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ ...springConfig, delay: 0.1 }}
-                className="text-4xl md:text-6xl font-serif text-gray-900 dark:text-foreground tracking-tight leading-tight"
+                className="text-3xl md:text-6xl font-serif text-gray-900 dark:text-foreground tracking-tight leading-tight"
               >
                 Segala yang Anda butuhkan untuk kenyamanan.
               </motion.h3>
@@ -440,7 +440,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-muted-foreground text-lg md:text-xl max-w-sm font-serif italic leading-relaxed lg:mt-12 mx-auto lg:mx-0"
+              className="text-muted-foreground text-base md:text-xl max-w-sm font-serif italic leading-relaxed lg:mt-12 mx-auto lg:mx-0"
             >
               "Kami merancang setiap fasilitas untuk mendukung produktivitas dan kenyamanan Anda."
             </motion.p>
@@ -485,9 +485,9 @@ export default function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={springConfig}
-          className="bg-white dark:bg-card rounded-[3rem] p-8 md:p-24 border border-border shadow-[0_32px_64px_-12px_rgba(0,0,0,0.08)] overflow-hidden"
+          className="bg-white dark:bg-card rounded-[3rem] p-6 md:p-24 border border-border shadow-[0_32px_64px_-12px_rgba(0,0,0,0.08)] overflow-hidden"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12 md:mb-24">
             <div className="order-2 lg:order-1 relative h-[400px] md:h-[600px] bg-muted dark:bg-black/20 rounded-[2.5rem] border border-border overflow-hidden shadow-inner">
                <iframe 
                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.447447141441!2d112.6052003106414!3d-7.948050679348421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTYnNTMuMCJTIDExMsKwMzYnMjYuNiJF!5e0!3m2!1sen!2sid!4v1703830000000!5m2!1sen!2sid" 
@@ -543,11 +543,11 @@ export default function Home() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="bg-white dark:bg-card rounded-[3rem] p-8 md:p-24 border border-border shadow-[0_32px_64px_-12px_rgba(0,0,0,0.08)]"
+          className="bg-white dark:bg-card rounded-[3rem] p-6 md:p-24 border border-border shadow-[0_32px_64px_-12px_rgba(0,0,0,0.08)]"
         >
-          <div className="text-center mb-16 md:mb-24 px-4">
+          <div className="text-center mb-12 md:mb-24 px-4">
             <h2 className="text-primary text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] mb-4">Pilih Ruang Anda</h2>
-            <h3 className="text-4xl md:text-6xl font-serif text-gray-900 dark:text-foreground tracking-tight">Paket Kamar</h3>
+            <h3 className="text-3xl md:text-6xl font-serif text-gray-900 dark:text-foreground tracking-tight">Paket Kamar</h3>
           </div>
           <ListingGrid />
 
@@ -600,19 +600,19 @@ export default function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={springConfig}
-          className="bg-white dark:bg-card rounded-[3rem] p-8 md:p-24 border border-border shadow-[0_32px_64px_-12px_rgba(0,0,0,0.08)]"
+          className="bg-white dark:bg-card rounded-[3rem] p-6 md:p-24 border border-border shadow-[0_32px_64px_-12px_rgba(0,0,0,0.08)]"
         >
-          <div className="text-center mb-16 md:mb-20">
+          <div className="text-center mb-12 md:mb-20">
             <h2 className="text-3xl md:text-5xl font-serif text-gray-900 dark:text-foreground tracking-tight">Informasi Penting</h2>
           </div>
           
           <Tabs defaultValue="umum" className="w-full">
-            <TabsList className="flex w-fit mx-auto rounded-full bg-muted dark:bg-white/5 p-1 mb-12 md:mb-16 border border-border overflow-hidden">
+            <TabsList className="flex w-fit mx-auto rounded-full bg-muted dark:bg-white/5 p-1 mb-8 md:mb-16 border border-border overflow-hidden">
               {faqCategories.map((cat) => (
                 <TabsTrigger 
                   key={cat.id} 
                   value={cat.id}
-                  className="rounded-full px-8 md:px-12 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-muted-foreground font-bold transition-all text-[11px] uppercase tracking-[0.2em]"
+                  className="rounded-full px-4 md:px-12 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-muted-foreground font-bold transition-all text-[10px] md:text-[11px] uppercase tracking-[0.2em]"
                 >
                   {cat.label}
                 </TabsTrigger>
@@ -626,9 +626,9 @@ export default function Home() {
                     <AccordionItem 
                       key={i} 
                       value={`item-${i}`}
-                      className="border border-border rounded-2xl bg-muted/30 dark:bg-white/5 px-8 py-2 hover:bg-white dark:hover:bg-white/10 transition-all data-[state=open]:bg-white dark:data-[state=open]:bg-white/10"
+                      className="border border-border rounded-2xl bg-muted/30 dark:bg-white/5 px-4 md:px-8 py-2 hover:bg-white dark:hover:bg-white/10 transition-all data-[state=open]:bg-white dark:data-[state=open]:bg-white/10"
                     >
-                      <AccordionTrigger className="text-left font-serif text-xl text-gray-900 dark:text-foreground hover:no-underline py-6 leading-snug">
+                      <AccordionTrigger className="text-left font-serif text-lg md:text-xl text-gray-900 dark:text-foreground hover:no-underline py-6 leading-snug">
                         <span className="flex-1 pr-4">{item.q}</span>
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground font-medium text-sm md:text-base leading-relaxed pb-8 pt-2">
