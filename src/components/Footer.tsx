@@ -31,7 +31,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-extrabold text-foreground mb-6 tracking-tight">Navigasi</h4>
+            <h4 className="font-serif text-lg text-foreground mb-6 tracking-tight">Navigasi</h4>
             <ul className="space-y-4 text-sm text-muted-foreground font-medium">
               <li><Link href="/" className="hover:text-primary transition-colors">Beranda</Link></li>
               <li><Link href="#sewa" className="hover:text-primary transition-colors">Paket Kamar</Link></li>
@@ -41,7 +41,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-extrabold text-foreground mb-6 tracking-tight">Tipe Kamar</h4>
+            <h4 className="font-serif text-lg text-foreground mb-6 tracking-tight">Tipe Kamar</h4>
             <ul className="space-y-4 text-sm text-muted-foreground font-medium">
               <li><span className="cursor-default">Kamar Small</span></li>
               <li><span className="cursor-default">Kamar Medium</span></li>
@@ -50,7 +50,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-extrabold text-foreground mb-6 tracking-tight">Hubungi Kami</h4>
+            <h4 className="font-serif text-lg text-foreground mb-6 tracking-tight">Hubungi Kami</h4>
             <ul className="space-y-4 text-sm text-muted-foreground font-medium">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary shrink-0" />

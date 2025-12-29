@@ -7,31 +7,31 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export const PropertyGallery = () => {
   return (
     <section id="gallery" className="max-w-7xl mx-auto px-4 pt-16 md:pt-32 pb-12 relative z-10">
-      <div className="text-center mb-12 md:mb-16 px-4">
-        <h2 className="text-gray-400 dark:text-zinc-500 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] mb-4">
+      <div className="text-center mb-16 md:mb-24 px-4">
+        <h2 className="text-primary text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] mb-4">
           Galeri Hunian
         </h2>
-        <h3 className="text-gray-900 dark:text-foreground text-2xl md:text-5xl font-extrabold tracking-tight mb-8 md:mb-12">
+        <h3 className="text-gray-900 dark:text-foreground text-4xl md:text-6xl font-serif tracking-tight mb-12 md:mb-16">
           Melihat ke dalam kenyamanan
         </h3>
         
         <Tabs defaultValue="medium" className="w-full">
-          <TabsList className="flex w-fit mx-auto rounded-full bg-white/50 dark:bg-white/5 p-1 mb-8 md:mb-16 border border-gray-100 dark:border-white/10 backdrop-blur-sm shadow-sm overflow-hidden">
+          <TabsList className="flex w-fit mx-auto rounded-full bg-muted dark:bg-white/5 p-1 mb-12 md:mb-20 border border-border overflow-hidden">
             <TabsTrigger 
               value="small" 
-              className="rounded-full px-4 md:px-10 py-2.5 md:py-3 data-[state=active]:bg-[#FFBF00] data-[state=active]:text-gray-900 text-gray-500 dark:text-zinc-400 font-bold transition-all text-xs md:text-sm tracking-tight border border-transparent dark:data-[state=inactive]:hover:bg-white/5"
+              className="rounded-full px-8 md:px-12 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-muted-foreground font-bold transition-all text-[11px] uppercase tracking-[0.2em]"
             >
               Tipe Small
             </TabsTrigger>
             <TabsTrigger 
               value="medium" 
-              className="rounded-full px-4 md:px-10 py-2.5 md:py-3 data-[state=active]:bg-[#FFBF00] data-[state=active]:text-gray-900 text-gray-500 dark:text-zinc-400 font-bold transition-all text-xs md:text-sm tracking-tight border border-transparent dark:data-[state=inactive]:hover:bg-white/5"
+              className="rounded-full px-8 md:px-12 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-muted-foreground font-bold transition-all text-[11px] uppercase tracking-[0.2em]"
             >
               Tipe Medium
             </TabsTrigger>
             <TabsTrigger 
               value="large" 
-              className="rounded-full px-4 md:px-10 py-2.5 md:py-3 data-[state=active]:bg-[#FFBF00] data-[state=active]:text-gray-900 text-gray-500 dark:text-zinc-400 font-bold transition-all text-xs md:text-sm tracking-tight border border-transparent dark:data-[state=inactive]:hover:bg-white/5"
+              className="rounded-full px-8 md:px-12 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground text-muted-foreground font-bold transition-all text-[11px] uppercase tracking-[0.2em]"
             >
               Tipe Large
             </TabsTrigger>
@@ -39,8 +39,8 @@ export const PropertyGallery = () => {
           
           {['small', 'medium', 'large'].map((roomType) => (
             <TabsContent key={roomType} value={roomType} className="focus-visible:outline-none">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 h-[400px] md:h-[700px]">
-                <div className="col-span-2 row-span-2 relative rounded-2xl md:rounded-[2.5rem] overflow-hidden group shadow-xl border border-gray-50 dark:border-white/5">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 h-[500px] md:h-[800px]">
+                <div className="col-span-2 row-span-2 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-2xl border border-border">
                   <Image 
                     src={`https://images.unsplash.com/photo-${roomType === 'small' ? '1522708323590-d24dbb6b0267' : roomType === 'medium' ? '1502672260266-1c1ef2d93688' : '1554995207-c18c203602cb'}?q=80&w=1200&auto=format&fit=crop`}
                     alt={`${roomType} room`}
@@ -48,9 +48,9 @@ export const PropertyGallery = () => {
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                     priority
                   />
-                  <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <div className="relative rounded-xl md:rounded-[2.5rem] overflow-hidden group shadow-lg border border-gray-50 dark:border-white/5">
+                <div className="relative rounded-2xl md:rounded-[3rem] overflow-hidden group shadow-lg border border-border">
                   <Image 
                     src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=800&auto=format&fit=crop"
                     alt="Kitchen"
@@ -58,7 +58,7 @@ export const PropertyGallery = () => {
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
                 </div>
-                <div className="relative rounded-xl md:rounded-[2.5rem] overflow-hidden group shadow-lg border border-gray-50 dark:border-white/5">
+                <div className="relative rounded-2xl md:rounded-[3rem] overflow-hidden group shadow-lg border border-border">
                   <Image 
                     src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=800&auto=format&fit=crop"
                     alt="Lounge"
@@ -66,7 +66,7 @@ export const PropertyGallery = () => {
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
                 </div>
-                <div className="col-span-2 relative rounded-xl md:rounded-[2.5rem] overflow-hidden group shadow-lg border border-gray-50 dark:border-white/5">
+                <div className="col-span-2 relative rounded-2xl md:rounded-[3rem] overflow-hidden group shadow-lg border border-border">
                   <Image 
                     src="https://plus.unsplash.com/premium_photo-1676823553207-758c7a66e9bb?q=80&w=1200&auto=format&fit=crop"
                     alt="Exterior"

@@ -3,34 +3,34 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #F9F9F7;
-  --foreground: #1A1A1A;
+  --background: #FCFAF8;
+  --foreground: #1C1917;
   --card: #FFFFFF;
-  --card-foreground: #1A1A1A;
-  --muted: #F3F3F1;
-  --muted-foreground: #666666;
-  --border: #E5E5E0;
-  --input: #E5E5E0;
-  --primary: #FFBF00;
-  --primary-foreground: #1A1A1A;
-  --accent: #F3F3F1;
-  --ring: #FFBF00;
-  --radius: 1.25rem;
+  --card-foreground: #1C1917;
+  --muted: #F5F2EF;
+  --muted-foreground: #78716C;
+  --border: #E7E2DF;
+  --input: #E7E2DF;
+  --primary: #C5A021;
+  --primary-foreground: #FFFFFF;
+  --accent: #F5F2EF;
+  --ring: #C5A021;
+  --radius: 0.75rem;
 }
 
 .dark {
-  --background: #0C0C0B;
-  --foreground: #F9F9F7;
-  --card: #141413;
-  --card-foreground: #F9F9F7;
-  --muted: #1C1C1B;
-  --muted-foreground: #A1A19A;
-  --border: #272726;
-  --input: #272726;
-  --primary: #FFBF00;
-  --primary-foreground: #0C0C0B;
-  --accent: #1C1C1B;
-  --ring: #FFBF00;
+  --background: #0C0B0A;
+  --foreground: #F5F2EF;
+  --card: #171513;
+  --card-foreground: #F5F2EF;
+  --muted: #1C1A18;
+  --muted-foreground: #A8A29E;
+  --border: #2D2A27;
+  --input: #2D2A27;
+  --primary: #C5A021;
+  --primary-foreground: #0C0B0A;
+  --accent: #1C1A18;
+  --ring: #C5A021;
 }
 
 @theme inline {
@@ -47,14 +47,16 @@
   --color-accent: var(--accent);
   --color-ring: var(--ring);
   
+  --font-serif: var(--font-serif);
+  
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 }
 
 @theme {
-  --color-primary: #FFBF00;
-  --color-primary-dark: #E6AC00;
+  --color-primary: #C5A021;
+  --color-primary-dark: #A6861B;
 }
 
 @layer base {
@@ -71,7 +73,11 @@
 
   body {
     font-family: var(--font-geist-sans), system-ui, sans-serif;
-    @apply bg-background text-foreground antialiased transition-colors duration-300;
+    @apply bg-background text-foreground antialiased transition-colors duration-500;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif), serif;
   }
 }
 
