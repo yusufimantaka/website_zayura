@@ -43,7 +43,7 @@ export const PropertyGallery = () => {
                 <div className="col-span-2 row-span-2 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-2xl border border-border">
                   <Image 
                     src={`https://images.unsplash.com/photo-${roomType === 'small' ? '1522708323590-d24dbb6b0267' : roomType === 'medium' ? '1502672260266-1c1ef2d93688' : '1554995207-c18c203602cb'}?q=80&w=1200&auto=format&fit=crop`}
-                    alt={`${roomType} room`}
+                    alt={`Interior Kamar Kos Putri Eksklusif Malang Tipe ${roomType.charAt(0).toUpperCase() + roomType.slice(1)}`}
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                     priority
@@ -53,7 +53,7 @@ export const PropertyGallery = () => {
                 <div className="relative rounded-2xl md:rounded-[3rem] overflow-hidden group shadow-lg border border-border">
                   <Image 
                     src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=800&auto=format&fit=crop"
-                    alt="Kitchen"
+                    alt="Fasilitas Dapur Bersama Kos Mahasiswi Malang"
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
@@ -61,7 +61,7 @@ export const PropertyGallery = () => {
                 <div className="relative rounded-2xl md:rounded-[3rem] overflow-hidden group shadow-lg border border-border">
                   <Image 
                     src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=800&auto=format&fit=crop"
-                    alt="Lounge"
+                    alt="Lobby Mewah Kos Putri Fasilitas Hotel Malang"
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
@@ -69,7 +69,7 @@ export const PropertyGallery = () => {
                 <div className="col-span-2 relative rounded-2xl md:rounded-[3rem] overflow-hidden group shadow-lg border border-border">
                   <Image 
                     src="https://plus.unsplash.com/premium_photo-1676823553207-758c7a66e9bb?q=80&w=1200&auto=format&fit=crop"
-                    alt="Exterior"
+                    alt="Gedung Kos Eksklusif Gajayana Malang Dekat Kampus"
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                   />

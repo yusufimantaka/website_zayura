@@ -22,7 +22,17 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Zayura Exclusive - Kost Putri Eksklusif Malang dekat UB & UIN",
   description: "Zayura Exclusive: Kos putri eksklusif di Malang dekat UB & UIN. Fasilitas hotel, AC, WiFi 400Mbps, aman & nyaman. Booking sekarang!",
-  keywords: ["kos putri malang", "kos eksklusif malang", "kos dekat ub", "kos dekat uin malang", "zayura exclusive"],
+  keywords: [
+    "kos putri malang", 
+    "kos eksklusif malang", 
+    "kos dekat ub", 
+    "kos dekat uin malang", 
+    "zayura exclusive",
+    "kos putri dekat uin malang",
+    "kos eksklusif gajayana",
+    "kos fasilitas hotel malang",
+    "hunian mahasiswi premium ketawanggede"
+  ],
 };
 
 export default function RootLayout({

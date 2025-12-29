@@ -39,7 +39,7 @@ export default function KamarPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-serif mb-8"
           >
-            Eksplorasi Ruang Pribadi
+            Kamar Kos Putri Eksklusif Malang
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export default function KamarPage() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto font-serif italic"
           >
-            {"Setiap kamar dirancang dengan standar hotel untuk mendukung kenyamanan istirahat dan fokus belajar Anda."}
+            {"Setiap kamar kos di Gajayana ini dirancang dengan standar hotel untuk mendukung kenyamanan mahasiswi UB & UIN Malang."}
           </motion.p>
         </section>
 

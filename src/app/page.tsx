@@ -223,7 +223,7 @@ export default function Home() {
                 {"\"Kost Putri Eksklusif & Premium Terdekat dari UB & UIN Malang.\""}
               </h2>
               <p className="text-white/70 text-xs md:text-lg font-medium tracking-wide px-6">
-                Fasilitas lengkap: AC, Water Heater, WiFi 400Mbps. Aman dengan Security & CCTV 24 Jam.
+                Kos putri dekat UIN Malang dengan fasilitas hotel bintang 5, keamanan fingerprint, dan WiFi 400Mbps.
               </p>
             </motion.div>
 
@@ -289,7 +289,7 @@ export default function Home() {
             transition={{ ...springConfig, delay: 0.1 }}
             className="text-4xl md:text-6xl font-serif text-gray-900 dark:text-foreground tracking-tight"
           >
-            Eksterior & Fasilitas Bersama
+            Kos Eksklusif Gajayana Malang
           </motion.h3>
         </div>
 
@@ -303,13 +303,13 @@ export default function Home() {
           >
             <Image 
               src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1600&auto=format&fit=crop"
-              alt="Building Exterior"
+              alt="Gedung Kost Eksklusif Gajayana Malang Fasilitas Hotel"
               fill
               className="object-cover transition-transform duration-[2s] group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 md:p-16">
-              <h4 className="text-white text-3xl md:text-5xl font-serif mb-4">Gedung Eksklusif</h4>
-              <p className="text-white/60 text-lg font-serif italic">"Privasi dan keamanan dalam balutan arsitektur kontemporer."</p>
+              <h4 className="text-white text-3xl md:text-5xl font-serif mb-4">Kost Fasilitas Hotel Malang</h4>
+              <p className="text-white/60 text-lg font-serif italic">"Privasi dan keamanan mahasiswi dalam balutan arsitektur kontemporer."</p>
             </div>
           </motion.div>
 
@@ -322,7 +322,7 @@ export default function Home() {
           >
             <Image 
               src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1000&auto=format&fit=crop"
-              alt="Common Kitchen"
+              alt="Dapur Bersama Kos Putri Malang Ketawanggede"
               fill
               className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
             />
@@ -344,7 +344,7 @@ export default function Home() {
           >
             <Image 
               src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?q=80&w=1000&auto=format&fit=crop"
-              alt="Lobby Area"
+              alt="Lobby Mewah Kos Eksklusif Malang Dekat UB"
               fill
               className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
             />
@@ -365,7 +365,7 @@ export default function Home() {
           >
             <Image 
               src="https://images.unsplash.com/photo-1590674867585-81c3723929f0?q=80&w=1000&auto=format&fit=crop"
-              alt="Parking Area"
+              alt="Parkir Luas Aman Kos Putri Malang"
               fill
               className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
             />
@@ -387,7 +387,7 @@ export default function Home() {
           >
             <Image 
               src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000&auto=format&fit=crop"
-              alt="Security Entrance"
+              alt="Sistem Keamanan Fingerprint Kos Putri Eksklusif"
               fill
               className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
             />
@@ -497,7 +497,7 @@ export default function Home() {
             </div>
             <div className="order-1 lg:order-2 text-center lg:text-left">
               <h2 className="text-primary text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] mb-6">Lokasi Strategis</h2>
-              <h3 className="text-4xl md:text-6xl font-serif text-gray-900 dark:text-foreground tracking-tight mb-8 leading-tight">Jantung Ketawanggede.</h3>
+              <h3 className="text-4xl md:text-6xl font-serif text-gray-900 dark:text-foreground tracking-tight mb-8 leading-tight">Hunian Mahasiswi Premium Ketawanggede.</h3>
               <p className="text-muted-foreground text-base md:text-xl font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0 font-serif italic mb-12">
                 Terletak di kawasan "Kerto", berada tepat di antara universitas-universitas paling bergengsi di Malang.
               </p>

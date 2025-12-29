@@ -11,14 +11,14 @@ export const Footer = () => {
             <Link href="/" className="inline-block mb-6">
               <Image 
                 src="/images/logo.png" 
-                alt="Zayura Exclusive" 
+                alt="Logo Zayura Exclusive Kost Putri Malang" 
                 width={140} 
                 height={50} 
                 className="h-10 w-auto object-contain dark:brightness-0 dark:invert"
               />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Pengalaman hunian eksklusif di jantung Gajayana, Malang. Fasilitas modern dengan sentuhan kenyamanan rumah.
+              Kos Putri Eksklusif Terdekat dari UB & UIN Malang. Hunian mahasiswi premium Ketawanggede dengan fasilitas hotel bintang 5.
             </p>
             <div className="flex gap-4">
               <Link href="#" className="p-2 bg-muted rounded-full text-muted-foreground hover:text-primary transition-colors">

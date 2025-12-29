@@ -47,7 +47,7 @@ export const PropertyCard = ({ image, name, location, price, tag, customPrice }:
       <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-8 shadow-inner transition-all duration-700">
         <Image 
           src={image} 
-          alt={name} 
+          alt={`Kamar ${name} - Kos Putri Eksklusif Malang dekat UB & UIN`} 
           fill 
           className="object-cover transition-transform duration-1000 group-hover:scale-110"
         />
