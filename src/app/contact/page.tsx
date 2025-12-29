@@ -112,7 +112,7 @@ export default function ContactPage() {
                    style={{ backgroundImage: `url("https://www.transparenttextures.com/patterns/natural-paper.png")` }} 
               />
               <div className="relative z-10">
-                <MessageCircle size={60} md:size={80} strokeWidth={1} className="mb-8 md:mb-10 mx-auto opacity-50" />
+                <MessageCircle strokeWidth={1} className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] mb-8 md:mb-10 mx-auto opacity-50" />
                 <h3 className="text-3xl md:text-6xl font-serif mb-6 md:mb-8 leading-tight">Fast Response via WhatsApp</h3>
                 <p className="text-base md:text-xl mb-10 md:mb-12 opacity-80 font-serif italic">
                   {"Dapatkan respon tercepat untuk ketersediaan unit dan jadwal visit melalui WhatsApp resmi kami."}
